@@ -10,6 +10,7 @@ import {
   PackagePlus,
   Pencil,
   PackageX,
+  List,
 } from "lucide-react"
 import { NavMain } from "@/components/layout/sidebar/nav-main"
 import { NavUser } from "@/components/layout/sidebar/nav-user"
@@ -24,6 +25,7 @@ import {
 } from "@/components/ui/sidebar"
 import Image from "next/image"
 import Link from "next/link"
+import { url } from "inspector"
 
 const data = {
   user: {
@@ -40,7 +42,7 @@ const data = {
     {
       title: "Analytics",
       icon: ChartArea,
-      isActive: true,
+      url: "/analytics",
     },
     {
       title: "Productos",
@@ -49,7 +51,7 @@ const data = {
       items: [
         {
           title: "Evaluaciones",
-          icon: Calendar,
+          icon: List,
           url: "/productos/evaluaciones",
         },
         {
@@ -60,12 +62,12 @@ const data = {
         {
           title: "Modificar Existente",
           icon: Pencil,
-          url: "/productos/evaluaciones",
+          url: "/productos/modificar",
         },
         {
           title: "Descontinuar",
           icon: PackageX,
-          url: "/productos/evaluaciones",
+          url: "/productos/descontinuar",
         },
       ],
     },

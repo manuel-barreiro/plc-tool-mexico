@@ -1,34 +1,21 @@
-export type ProductType = "Linea" | "InAndOut"
-
-export type CheckpointStatus =
-  | "pending"
-  | "in_progress"
-  | "completed"
-  | "blocked"
-
-export type TimelineCheckpoint = {
-  days: 120 | 90 | 60 | 30
-  status: CheckpointStatus
-  tasks: {
-    id: string
-    name: string
-    completed: boolean
-    dueDate: Date
-  }[]
-}
-
-export type Product = {
+export interface Product {
   id: string
-  sapNumber: string
-  name: string
-  type: ProductType
-  classification: string
+  status: number
+  año_mes: string
+  descripcion_sap: string
+  nombre_lean: string
+  sap: number
+  division: string
+  marca: string
+  tipo_actividad: "Linea" | "In&Out" | "Innovaciones"
+  clasificacion: string
   nps: number
-  apo: string
-  status: CheckpointStatus
-  timeline: TimelineCheckpoint[]
-  createdAt: Date
-  updatedAt: Date
+  apo: number
+  ton: number
+  rolling: number
+  tonxrolling: number
+  days_120: number
+  days_90: number
+  days_60: number
+  days_30: number
 }
-
-export type UserRole = "admin" | "manager" | "viewer"

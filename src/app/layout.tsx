@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/sidebar"
 import AppBreadcrumbs from "@/components/layout/AppBreadcrumbs"
 import ThemeToggle from "@/components/theme/ThemeToggle"
+import { Toaster } from "@/components/ui/toaster"
 
 const nestleBrush = localFont({
   src: "../../assets/fonts/NestleBrush-Regular.ttf",
@@ -63,6 +64,7 @@ export default function RootLayout({
               <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
                 {children}
               </div>
+              <Toaster />
             </SidebarInset>
           </SidebarProvider>
         </ThemeProvider>
